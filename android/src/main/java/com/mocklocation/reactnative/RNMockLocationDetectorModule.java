@@ -51,11 +51,9 @@ public class RNMockLocationDetectorModule extends ReactContextBaseJavaModule {
     return "RNMockLocationDetector";
   }
 
-  
   /** Java code for checkLocationProvide */
   @ReactMethod
-  public void checkMockLocationProvider(final String dialogTitle, final String dialogMessage,
-      final String dialogButtonText) {
+  public void checkMockLocationProvider(final Callback callback) {
     if (ActivityCompat.checkSelfPermission(getCurrentActivity(),
         Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
         && ActivityCompat.checkSelfPermission(getCurrentActivity(),
@@ -71,22 +69,10 @@ public class RNMockLocationDetectorModule extends ReactContextBaseJavaModule {
             // Got last known location. In some rare situations this can be null.
             if (location != null) {
               // Logic to handle location object
-              if (isLocationFromMockProvider(getCurrentActivity(), location)) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(getCurrentActivity());
-                builder.setTitle(dialogTitle);
-                builder.setMessage(dialogMessage);
-                builder.setCancelable(false);
-                builder.setPositiveButton(dialogButtonText, new DialogInterface.OnClickListener() {
-                  public void onClick(DialogInterface dialog, int which) {
-                    getCurrentActivity().finish();
-                  }
-                });
-                builder.show();
-
-              } 
+              boolean result = isLocationFromMockProvider(getCurrentActivity(), location);
+              callback.invoke(result);
             }
           }
-
         });
   }
 
