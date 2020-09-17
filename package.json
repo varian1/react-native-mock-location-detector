@@ -1,25 +1,53 @@
 {
-  "name": "react-native-mock-location-detector",
-  "version": "1.0.0",
+  "_from": "git+https://github.com/FAdiputra/react-native-mock-location-detector.git",
+  "_id": "react-native-mock-location-detector@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/react-native-mock-location-detector",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-mock-location-detector@git+https://github.com/FAdiputra/react-native-mock-location-detector.git",
+    "name": "react-native-mock-location-detector",
+    "escapedName": "react-native-mock-location-detector",
+    "rawSpec": "git+https://github.com/FAdiputra/react-native-mock-location-detector.git",
+    "saveSpec": "git+https://github.com/FAdiputra/react-native-mock-location-detector.git",
+    "fetchSpec": "https://github.com/FAdiputra/react-native-mock-location-detector.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/FAdiputra/react-native-mock-location-detector.git#6e67f1e92c5f0bf4673109752b0dff822d28dcbf",
+  "_spec": "react-native-mock-location-detector@git+https://github.com/FAdiputra/react-native-mock-location-detector.git",
+  "_where": "D:\\development",
+  "author": {
+    "name": "Aditya Kandari",
+    "email": "adkandari@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/adkandari/react-native-mock-location-detector/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "Detects if the device is using mock location app to spoof it's real location. In that case user will be prompted to fix the mock location settings first before using the app.",
-  "main": "index.js",
-  "scripts": {},
+  "homepage": "https://github.com/adkandari/react-native-mock-location-detector",
   "keywords": [
     "react native",
     "location spoofing",
     "mock location"
   ],
-  "author": "Aditya Kandari <adkandari@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/adkandari/react-native-mock-location-detector",
-  "bugs": {
-    "url": "https://github.com/adkandari/react-native-mock-location-detector/issues"
+  "main": "index.js",
+  "name": "react-native-mock-location-detector",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/adkandari/react-native-mock-location-detector.git"
   },
-  "peerDependencies": {
-    "react-native": "^0.41.2"
-  }
+  "scripts": {},
+  "version": "1.0.0"
 }
